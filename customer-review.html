@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Reviews - Coffee Lovers</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+                        url('/api/placeholder/1920/1080');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: #3b2f2f;
+            color: #fff;
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            text-align: center;
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+       
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background: #d4af37;
+            color: #3b2f2f;
+        }
+
+        main {
+            flex: 1;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .page-title {
+            background-color: gold;
+            color: #3b2f2f;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .reviews-container {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .review-card {
+            background-color: #fff;
+            border: 2px solid #3b2f2f;
+            border-radius: 12px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .review-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            border-color: gold;
+        }
+
+        .review-content {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .reviewer-name {
+            font-weight: bold;
+            color: #3b2f2f;
+            text-align: right;
+            font-style: italic;
+        }
+
+        .rating {
+            color: gold;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        footer {
+            background-color: #3b2f2f;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            margin-top: auto;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                gap: 1rem;
+            }
+
+            .review-card {
+                padding: 1.5rem;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Customer Reviews</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="coffee-types.html">Coffee Types</a></li>
+                <li><a href="brewing-methods.html">Brewing Methods</a></li>
+                <li><a href="customer-review.html">Reviews</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="page-title">What Our Customers Say...</h2>
+        
+        <div class="reviews-container">
+            <div class="review-card">
+                <div class="rating">★★★★★</div>
+                <p class="review-content">"The best coffee I've ever had! The atmosphere is so cozy and welcoming. Every morning starts perfectly with their signature blend. The baristas are true artists who take pride in their craft."</p>
+                <p class="reviewer-name">- Jane Doe</p>
+            </div>
+
+            <div class="review-card">
+                <div class="rating">★★★★★</div>
+                <p class="review-content">"Amazing service and delicious pastries to pair with my coffee! The attention to detail in both their coffee preparation and customer service is outstanding. Their croissants are to die for!"</p>
+                <p class="reviewer-name">- John Smith</p>
+            </div>
+
+            <div class="review-card">
+                <div class="rating">★★★★★</div>
+                <p class="review-content">"Every time I visit, I am greeted with a smile and a perfectly brewed cup of coffee. This is my go-to spot! The ambient music and comfortable seating make it perfect for both work and relaxation."</p>
+                <p class="reviewer-name">- Emily Johnson</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Coffee Lovers | All rights reserved.</p>
+    </footer>
+</body>
+</html>

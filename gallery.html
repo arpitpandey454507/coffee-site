@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Coffee Lovers</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: blanchedalmond;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background: #3b2f2f;
+            color: #fff;
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            text-align: center;
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            padding: 0;
+        }
+
+        
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background: #d4af37;
+            color: #3b2f2f;
+        }
+
+        main {
+            flex: 1;
+            padding: 2rem;
+            max-width: 1600px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .gallery-title {
+            background-color: gold;
+            color: #3b2f2f;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 0 auto 2rem auto;
+        }
+
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            aspect-ratio: 1/1;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            border: 6px solid white;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(59, 47, 47, 0.8);
+            color: white;
+            padding: 1rem;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+
+        footer {
+            background: #3b2f2f;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            margin-top: auto;
+        }
+
+        @media (max-width: 768px) {
+            .gallery-container {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                padding: 1rem;
+                gap: 1rem;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Our Gallery</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="coffee-types.html">Coffee Types</a></li>
+                <li><a href="brewing-methods.html">Brewing Methods</a></li>
+                <li><a href="customer-review.html">Reviews</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="gallery-title">Explore our cozy cafe through these snapshots!</h2>
+        
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <img src="gallery1.jpg" alt="Coffee Shop Interior">
+                <div class="gallery-overlay">
+                    <p>Our warm and inviting interior</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="g3.jpeg" alt="Coffee Making Process">
+                <div class="gallery-overlay">
+                    <p>Crafting the perfect brew</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="g2.jpeg" alt="Coffee and Pastries">
+                <div class="gallery-overlay">
+                    <p>Fresh pastries and coffee</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="g4.jpeg" alt="Barista at Work">
+                <div class="gallery-overlay">
+                    <p>Our skilled baristas at work</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="g1.jpeg" alt="Coffee Beans">
+                <div class="gallery-overlay">
+                    <p>Premium coffee beans selection</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="gallery4.jpg" alt="Cafe Atmosphere">
+                <div class="gallery-overlay">
+                    <p>The perfect spot to relax</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Coffee Lovers | All rights reserved.</p>
+    </footer>
+</body>
+</html>

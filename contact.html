@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <title>Contact</title>
+</head>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:white;
+    
+    
+
+
+header {
+    background:#3b2f2f;
+    color: #fff;
+    padding: 10px 0;
+}
+
+header h1 {
+    text-align: center;
+    margin: 0;
+}
+
+nav {
+    text-align: center;
+    margin-top: 13px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+            text-decoration:underline;
+            color: gold;
+        }
+
+/* main {
+    padding: 30px;
+    text-align:left;
+
+
+} */
+
+
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#contact-info, #contact-form {
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #8B4513; /* Brown color */
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #8B4513; /* Brown color */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #6F4C3E; /* Darker brown */
+}
+
+
+footer {
+                background: #3b2f2f;
+                color: #fff;
+                text-align: center;
+                padding: 14px 0;
+                 margin-top:50vh; 
+                position: relative;
+                bottom: 0;
+                height: 5vh;
+                width: 100%;
+            }
+
+            #last{
+                color: red;
+            }
+            footer p {
+                padding: 1.5vh;
+            }
+
+</style>
+<body>
+    <header>
+        <h1>Contact Us</h1> 
+    </header>
+     
+    <main>
+        <section id="contact-info">
+            <h2>Get in Touch</h2>
+            <p>If you have any questions or comments, feel free to reach out!</p> <br>
+            <h3>Contact Information</h3><br>
+            <p>Email: info@coffeecafe.com</p>
+            <p>Phone: +123 456 7890</p>
+            <p>Address: Behind BH1, LOVELY PROFESSIONAL UNIVERSITY, Punjab</p>
+        </section>
+
+        <section id="contact-form">
+            <h2>Contact Form</h2>
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+
+
+       
+    </main>
+     <div id="last">
+        <h2 id="thanking"><marquee scrollamount="12">Thanks &#9786; For Visiting Us ...&hearts;</marquee></h2>
+     </div>
+    <footer>
+        <p>&copy; 2024 Coffee Cafe. All rights reserved.</p>
+    </footer>
+        

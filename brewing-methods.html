@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brewing Methods - Coffee Lovers</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            width: 100%;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(b1.webp);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header Styles */
+        header {
+            background: rgba(59, 47, 47, 0.95);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        #headimg {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            border: 2px solid #d4af37;
+            transition: transform 0.3s ease;
+        }
+
+        #headimg:hover {
+            transform: scale(1.1);
+        }
+
+        #shopname {
+            color: #fff;
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        nav {
+            background: rgba(59, 47, 47, 0.95);
+            padding: 0.5rem 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background: #d4af37;
+            color: #3b2f2f;
+        }
+
+        /* Main Content */
+        main {
+            flex: 1;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        #methods-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
+        }
+
+        #methods-title h1 {
+            color: #fff;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-bottom: 1rem;
+        }
+
+        .brewing-method {
+            background: rgba(255, 255, 255, 0.95);
+            margin: 2rem 0;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .brewing-method:hover {
+            transform: translateY(-5px);
+        }
+
+        .brewing-method h2 {
+            color: #8B4513;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .brewing-method h3 {
+            color: #333;
+            font-weight: normal;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        
+        /* Footer */
+        footer {
+            background: rgba(59, 47, 47, 0.95);
+            color: #fff;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .social-links a {
+            color: #fff;
+            margin: 0 10px;
+            font-size: 1.2rem;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            color: #d4af37;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+                padding: 1rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            #shopname {
+                font-size: 1.5rem;
+                margin-top: 0.5rem;
+            }
+
+            .brewing-method {
+                margin: 1rem;
+                padding: 1.5rem;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            main {
+                padding: 1rem;
+            }
+
+            #methods-title h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo-container">
+                <img id="headimg" src="coffeelogo.jpg.webp" alt="Coffee Lovers Logo">
+                <h1 id="shopname">Coffee☕Lovers</h1>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="coffee-types.html">Coffee Types</a></li>
+                <li><a href="brewing-methods.html">Brewing Methods</a></li>
+                <li><a href="customer-review.html">Reviews</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="methods-title">
+            <h1>Coffee Brewing Methods ☕</h1>
+            <p style="color: #fff;">Discover the art and science of brewing the perfect cup</p>
+        </section>
+
+        <div class="brewing-method">
+            <h2>Drip Coffee</h2>
+            <h3>Drip coffee is brewed by pouring hot water over ground coffee, which passes through a filter into a pot
+                or mug, producing a clean, well-balanced cup. This method is perfect for those who enjoy a classic,
+                straightforward coffee experience with consistent results.</h3>
+        </div>
+
+        <div class="brewing-method">
+            <h2>Espresso</h2>
+            <h3>Espresso is made by forcing pressurized hot water through finely-ground coffee, resulting in a small,
+                concentrated shot with rich flavor and crema. The foundation of many beloved coffee drinks, espresso
+                delivers an intense and complex flavor profile that's perfect for true coffee enthusiasts.</h3>
+        </div>
+
+        <div class="brewing-method">
+            <h2>French Press</h2>
+            <h3>The French Press method involves steeping coarsely ground coffee in hot water, then separating the
+                grounds with a metal plunger. This immersion brewing method produces a full-bodied cup with rich, robust
+                flavors and a distinctive texture that coffee connoisseurs love.</h3>
+        </div>
+
+        <div class="brewing-method">
+            <h2>Pour Over</h2>
+            <h3>Pour Over brewing allows the barista to manually pour hot water over coffee grounds, creating a precise
+                and clean-tasting cup. This method highlights the subtle flavors and aromatic compounds in your coffee
+                beans, making it ideal for single-origin coffees.</h3>
+        </div>
+
+        <div class="brewing-method">
+            <h2>Cold Brew</h2>
+            <h3>Cold brew is made by steeping coffee grounds in cold water for 12 to 24 hours, resulting in a smooth,
+                less acidic drink. Perfect for hot summer days, cold brew offers a refreshing and mellow coffee
+                experience with naturally sweet undertones.</h3>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Coffee Lovers | All rights reserved.</p>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
